@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Data.Repositorio.Interfaces;
+using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
@@ -20,5 +21,20 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
+
+        public IActionResult InserirAluno(Aluno aluno)
+        {
+            try
+            {
+                _alunoRepositorio.InserirAluno(aluno);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            return RedirectToAction("Index");
+        } 
     }
 }
