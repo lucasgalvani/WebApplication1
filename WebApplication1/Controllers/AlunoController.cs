@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebApplication1.Data.Repositorio;
 using WebApplication1.Data.Repositorio.Interfaces;
 using WebApplication1.Models;
 
@@ -35,6 +36,26 @@ namespace WebApplication1.Controllers
             }
 
             return RedirectToAction("Index");
-        } 
+        }
+
+        public IActionResult Editar(int id)
+        {
+            var aluno = _alunoRepositorio.BuscarId(id);
+            return View(aluno);
+        }
+
+        public IActionResult EditarAluno(Aluno aluno)
+        {
+            _alunoRepositorio.EditarAluno(aluno);
+            return RedirectToAction("Index");
+        }
+
+
+
+        public IActionResult ApagarAluno(Aluno aluno)
+        {
+            _alunoRepositorio.ApagarAluno(aluno);
+            return RedirectToAction("Index");
+        }
     }
 }
