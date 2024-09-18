@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using primeiroprojetoMVC.Data.Repositorio;
-using primeiroprojetoMVC.Data.Repositorio.Interfaces;
-using primeiroprojetoMVC.Models;
+using WebApplication1.Data.Repositorio;
+using WebApplication1.Data.Repositorio.Interfaces;
+using WebApplication1.Models;
 
-namespace primeiroprojetoMVC.Controllers
+namespace WebApplication1.Controllers
 {
     public class ProfessorController : Controller
     {
