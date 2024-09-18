@@ -1,13 +1,10 @@
 ﻿@model Aluno
 
-<form asp-controller="Aluno" asp-action="EditarAluno" method="post">
-
-    <input type="hidden" asp-for="Id" />
+<form asp-controller="Aluno" asp-action="InserirAluno" method="post">
 
     <div class="mb-3 col-md-6">
         <label class="form-label"> Nome</label>
-        <input type="text" asp-for="Nome" class="form-contr
-ol col-md-2">
+        <input type="text" asp-for="Nome" class="form-control col-md-2">
     </div>
 
     <div class="mb-3  col-md-2">

@@ -1,0 +1,30 @@
+﻿@model Professor
+
+<form asp-controller="Professor" asp-action="EditarProfessor" method="post">
+
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-3 col-md-2">
+        <label class="form-label">Nome</label>
+        <input type="text" asp-for="Nome" class="form-control">
+    </div>
+
+    <div class="mb-3 col-md-2">
+        <label class="form-label">Disciplina</label>
+        <input type="text" asp-for="Disciplina" class="form-control">
+    </div>
+
+    <div class="mb-3 col-md-2">
+        <label class="form-label">Data de nascimento</label>
+        <input type="text" asp-for="DataNascimento" class="form-control">
+    </div>
+
+    <div class="mb-3 col-md-2">
+        <label class="form-label">Sala</label>
+        <input type="text" asp-for="Sala" class="form-control">
+    </div>
+
+    <div class="text-left">
+        <button type="submit" class="btn btn-primary">Editar</button>
+    </div>
+</form>
